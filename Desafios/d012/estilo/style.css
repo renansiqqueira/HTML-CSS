@@ -6,6 +6,7 @@
 *{
     margin: 0px;
     padding: 0px;
+    font-size: 1em;
 }
 
 :root{
@@ -19,21 +20,19 @@ html,body{
     min-height: 100vh;
     background-color: grey;
     font-family: var(--fonte01);
-    font-size: 1em;
 }
 
 header{
     background-color: black;
     text-align: center;
     color: white;
-    font-variant: small-caps;
-    
 }
 
 header > h1{
     padding-top: 50px;
-    font-size: 10vw;
+    font-variant: small-caps;
     font-family: var(--fonte02);
+    font-size: 10vw;
     font-weight: normal;
 }
 
