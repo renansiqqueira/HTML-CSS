@@ -14,9 +14,21 @@
             width: 500px;
         }
 
+        caption{
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+            border: 3px solid rgba(0, 0, 0, 0.692);
+        }
+
         th,td {
             border: 1px solid black;
             padding: 5px;
+        }
+
+        th.superior{
+            border-top: none;
         }
 
         thead, tfoot{
@@ -24,6 +36,10 @@
             color: white;
         }
 
+        tbody > tr:nth-child(odd){ /* utilizando uma pseudoclasse para selecionar toda linha ímpar dentro do tbody*/
+            background-color: lightgray;
+        }
+        
         td.numero{
             text-align: right;
         }
@@ -32,10 +48,11 @@
 <body>
     <h1>Uso de tabelas grandes</h1>
     <table>
+        <caption>População por Estado no Brasil</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th class="superior" scope="col">Estado</th>
+                <th class="superior" scope="col" style="width: 50px;">População</th>
             </tr>
         </thead> 
 
@@ -177,7 +194,7 @@
         </tbody>
 
         <tfoot>
-            <th>Total</th>
+            <th scope="row">Total</th>
             <td class="numero"><strong>203.062.512</strong></td>
         </tfoot>
     </table>
